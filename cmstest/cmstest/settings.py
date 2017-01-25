@@ -58,6 +58,7 @@ INSTALLED_APPS = (
     'mptt',
     'rest_framework',
     'djangocms_rest_api',
+    'reversion'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -161,3 +162,6 @@ CKEDITOR_SETTINGS = {
         ['Bold', 'Italic', 'RemoveFormat'],
     ],
 }
+
+
+CMS_PERMISSION = True

@@ -1,0 +1,3 @@
+[submodule "cmstest/djangocms-rest-api"]
+	path = cmstest/djangocms-rest-api
+	url = git@github.com:DanielKirov/djangocms-rest-api.git

@@ -17,9 +17,11 @@ from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.static import static
 from django.contrib import admin
+from positive.views import textplugin_detail
 
 urlpatterns = i18n_patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('djangocms_rest_api.urls', namespace='api')),
+    url(r'^textplugins/(?P<pk>[0-9]+)/$', textplugin_detail),
     url(r'^', include('cms.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -3,7 +3,7 @@ from cms.plugin_pool import plugin_pool
 from djangocms_text_ckeditor.cms_plugins import TextPlugin
 from django.utils.translation import ugettext_lazy as _
 
-from .models import TextInception
+from .models import TextInception, Promo
 
 class TextInceptionPlugin(CMSPluginBase):
     model = TextInception
@@ -13,3 +13,11 @@ class TextInceptionPlugin(CMSPluginBase):
     child_classes = ['TextPlugin']
 
 plugin_pool.register_plugin(TextInceptionPlugin)
+
+
+class PromoPlugin(CMSPluginBase):
+    model = Promo
+    render_template = "promo_plugin.html"
+    cache = False
+
+plugin_pool.register_plugin(PromoPlugin)
