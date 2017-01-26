@@ -58,7 +58,8 @@ INSTALLED_APPS = (
     'mptt',
     'rest_framework',
     'djangocms_rest_api',
-    'reversion'
+    'reversion',
+    'rest_framework_recursive',
 )
 
 MIDDLEWARE_CLASSES = (
